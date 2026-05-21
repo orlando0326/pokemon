@@ -1,37 +1,147 @@
- *{
+*{
     margin: 0;
     box-sizing: border-box;
+    /* reset de css*/
 }
-body{
+
+body {
     background-color: #EFEFF2;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-.conteudo header h1{
-    color: #73c5e6;
+
+h1 {
+    color: #01a1a1;
     font-size: 96px;
     text-align: center;
+
 }
+
 .poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
+
 .poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-.card{
+
+.card {
     width: 320px;
-    height: 180px;
+    background-color: #e3e3de;
     border-radius: 30px;
-    background-color: brown;
-    box-shadow: 12px 12px 24px 0px #123456,-12px -12px 15px -0px #123456;
+    padding: 20px;
+    box-shadow: 12px 12px 24px 0px #d1d5db, -12px -12px 24px 0px #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
 
+.aro-avatar {
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    border: 12px solid transparent;
+    position: absolute;
+    transform: rotate(30deg);
+}
+
+.avatar-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: rgb(121, 123, 123);
+    box-shadow: 12px 12px 24px 0px #d1d5db, -12px -12px 24px 0px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+}
+
+.card.planta .aro-avatar {
+    border-bottom-color: #68c772;
+    border-left-color: #68c772;
+    border-top-color: #68c772;
+}
+
+.card.agua .aro-avatar {
+    border-bottom-color: #48bbed;
+    border-left-color: #48bbed;
+    border-top-color: #48bbed;
+}
+
+.card.fogo .aro-avatar {
+    border-bottom-color: #f17f;
+    border-left-color: #f17F;
+    border-top-color: #f17f;
+}
+
+.card.raio .aro-avatar {
+    border-bottom-color: #dceb0a;
+    border-left-color: #dceb0a;
+    border-top-color: #dceb0a;
+}
+
+.avatar-container img {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.15));
+}
+
+.nome-pokemon {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+
+.tipo-pokemon {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 600;
+    margin: 2.5rem;
+}
+
+.lista-estatisticas {
+    width: 100%;
+
+}
+
+.barra-estatistica {
+    height: 10px;
+    background-color: #f0f3f6;
+    border-radius: 10px;
+    box-shadow: inset 4px 4px 8px 0px #d1d5db, inset -4px -4px 8px 0px #ffffff;
+    position: relative;
+}
+.barra-preenchimento{
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.card.planta .barra-preenchimento{
+    background-color: #68c772;
+    box-shadow: 2px 0   5px rgba(  104 , 199, 114,0.4);
+}
+.card.card.agua .barra-preenchimento{
+background-color: #48bbed;
+box-shadow: 2px 0   5px rgba(  104 , 199, 114,0.4);
+}
+.card.card.fogo .barra-preenchimento{
+background-color: #f17F;
+}
+.card.raio .barra-preenchimento{
+    background-color: #dceb0a;
+}
+.cards-lista{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
